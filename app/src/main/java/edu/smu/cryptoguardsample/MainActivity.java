@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
             System.out.println(new String(badDigestAndRandom.getDigest("MD5", "Hello World!")));
             System.out.println(new String(badDigestAndRandom.getDigest("SHA1", "Hello World!")));
             System.out.println(new String(badDigestAndRandom.getDigest("SHA-512", "Hello World!")));
-
+            badDigestAndRandom.generateRandomBytes(12345);
             String key = "my+secret+key+lol";
             String initVector = "RandomInitVector";
             edu.smu.cryptoguardsample.crypto.BadSymCrypto crypto = new edu.smu.cryptoguardsample.crypto.BadSymCrypto("AES/CBC/PKCS5PADDING");
